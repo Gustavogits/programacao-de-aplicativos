@@ -1,0 +1,60 @@
+<html>
+
+    <head>
+        <title>PAGINA</title>
+
+        <style>
+
+            body{
+background-color: black;
+            }
+
+            img {
+                width: 100px;
+                height: 100px;
+                margin-top: 32px;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>OPA GALERINHA</h1>
+
+<input type="text" placeholder="Digite seu nome" id="nome"><br />
+<input type="password" id="text"><br />
+<input type="datetime-local" id="text"><br />
+<input type="color" id="cor"><br />
+<input type="file" id="text"><br />
+<input type="radio" id="text"><br />
+<input type="checkbox" id="text"><br />
+
+
+<select name="" id="">
+<option value=""></option>
+
+
+</select>
+
+<button>ENTRAR</button><br />
+
+<img src="https://github.com/Gustavogits.png" />
+
+
+<script>
+
+
+function clicou(){
+    var nome = document.getElementById("nome").value
+    alert(nome)
+}
+    var seletorcor = document.getElementById("cor")
+    seletorcor.addEventListener("imput", function () {
+        document.body.style.backgroundColor = seletorcor.value;
+    })
+
+</script>
+
+    </body>
+
+</html>
