@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+body {
+    background-color: #fafafa;
+    color: #262626;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+}
+
+button {
+    background-color: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+/*------------------------------*/
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    border-right: 1px solid #dbdbdb;
+}
+
+.logo {
+    margin-bottom: 45px;
+    margin-top: 20px;
+    font-size: 40px;
+    font-family: cursive;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-iten {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 20px 40px 13px;
+    border-radius: 85px;
+}
+
+.menu-iten span {
+    width: 25px;
+    font-size: 36px;
+    text-align: center;
+    margin-top: -16px;
+}
+
+.menu-iten:hover{
+    background-color: #f2f2f2;
+}
+
+/*====================================================*/
+
+.content {
+    width: 700px;
+    margin-left: 350px;
+    margin-top: 30px;
+}
+
+.stories {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.story {
+    width: 75px;
+    text-align: center;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.story img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    object-fit: cover;
+}
+
+.story-border {
+    width: 93px;
+    height: 93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 50%;
+    background: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bb5
+    );
+}

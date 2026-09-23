@@ -1,60 +1,57 @@
 <html>
 
-    <head>
-        <title>PAGINA</title>
+<head>
+    <title>NOSSA PRIMEIRA PÁGINA</title>
 
-        <style>
+    <style>
+        body {
+            background-color: blue;
+        }
 
-            body{
-background-color: black;
-            }
+        img {
+            width: 100px;
+            height: 100px;
+            margin-top: 32px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
 
-            img {
-                width: 100px;
-                height: 100px;
-                margin-top: 32px;
-                border-radius: 50%;
-            }
-        </style>
-    </head>
+<body>
+    <h1>PRIMEIRA PÁGINA</h1>
 
-    <body>
-        <h1>OPA GALERINHA</h1>
+    <input type="text" id="nome" placeholder="Digite seu nome"><br />
+    <input type="password" placeholder="Digite sua senha"><br />
+    <input type="datetime-local"><br />
+    <input type="color" id="cor"/><br />
+    <input type="file" /><br />
+    <input type="radio"><br />
+    <input type="checkbox"><br />
 
-<input type="text" placeholder="Digite seu nome" id="nome"><br />
-<input type="password" id="text"><br />
-<input type="datetime-local" id="text"><br />
-<input type="color" id="cor"><br />
-<input type="file" id="text"><br />
-<input type="radio" id="text"><br />
-<input type="checkbox" id="text"><br />
-
-
-<select name="" id="">
-<option value=""></option>
-
-
-</select>
-
-<button>ENTRAR</button><br />
-
-<img src="https://github.com/Gustavogits.png" />
+    <select name="" id="">
+        <option value="">JAVASCRIPT</option>
+        <option value="">HTML</option>
+        <option value="">CSS</option>
+    </select>
+    <br />
+    <br />
 
 
-<script>
+    <button onclick="clicou()">ENTRAR</button><br />
 
+    <img id="perfil" class="img-perfil" src="https://github.com/Gustavogits.png" />
 
-function clicou(){
-    var nome = document.getElementById("nome").value
-    alert(nome)
-}
-    var seletorcor = document.getElementById("cor")
-    seletorcor.addEventListener("imput", function () {
-        document.body.style.backgroundColor = seletorcor.value;
-    })
+    <script>
+        function clicou() {
+            var nome = document.getElementById("nome").value;
+            alert(nome);
+        }
 
-</script>
-
-    </body>
+        var seletorCor = document.getElementById("cor");
+        seletorCor.addEventListener("input", function () {
+            document.body.style.backgroundColor = seletorCor.value;
+        })
+    </script>
+</body>
 
 </html>
