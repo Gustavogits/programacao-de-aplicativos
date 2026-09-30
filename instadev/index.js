@@ -58,6 +58,18 @@ var posts = [
 
 // FUNÇÕES JS
 const feed = document.getElementById("feed");
+const botaoAbrir = document.getElementById("botaoAbrirModal")
+const botaoFechar = document.getElementById("botaoFecharModal")
+const modal = document.getElementById("modalPost")
+
+
+botaoAbrir.addEventListener("click", () => {
+    modal.classList.remove("hidden")
+})
+botaoFechar.addEventListener("click", () => {
+    modal.classList.add("hidden")
+})
+
 console.log(feed)
 
 function renderPosts() {
@@ -65,6 +77,16 @@ function renderPosts() {
 
     for(var i = 0; i < posts.length; i++) {
         var article = document.createElement("article");
+
+            var commentsHTML = "";
+            for(var comment of posts[i].comments) {
+                commentsHTML +=`
+                <p class="comment">
+                        <strong>${comment.username}</strong>
+                        ${comment.text}
+                    </p>
+            `;
+        }
 
         article.innerHTML = `
             <header class="post-header">
@@ -98,10 +120,7 @@ function renderPosts() {
 
                     <a href="#">Ver todos os 7 comentários</a>
 
-                    <p class="comment">
-                        <strong>mariaaaaa</strong>
-                        Blalbalbablba blablbalba balblaba.
-                    </p>
+                    ${commentsHTML}
 
                     <span class="post-date">Há 2 horas</span>
                 </div>
